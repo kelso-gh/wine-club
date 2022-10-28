@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel&family=Open+Sans:wght@300&family=Peralta&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Wine Club</title>
 </head>
 <body>
     <title>Bad Grapes Wine Club</title>
     <nav>
-        <a href="/">HOME</a>
-        <a href="/wines">SIGN IN</a>
+        <a href="" <%- title === 'Home' ? 'class="active"' : '' %>>HOME</a>
+        <% if (user) { %>
+          <a href=""	<%- title === 'Bundles' ? 'class="active"' : '' %>>
+          Wine Club Bundles</a>
+          <a href="" <%- title === 'Reviews' ? 'class="active"' : '' %>>Reviews</a>
+          <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
     </nav>
-</body>
-</html>

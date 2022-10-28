@@ -3,9 +3,10 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 var session = require('express-session');
 const passport = require('passport');
-var methodOverride = require('method-override');
+
 
 require('dotenv').config();
 require('./config/database');
