@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+var methodOverride = require('method-override');
 
 require('dotenv').config();
 require('./config/database');
@@ -14,6 +15,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
+app.use(methodOverride('_method'))
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
