@@ -1,5 +1,5 @@
 * {
-  font-family: 14px "Kaushan Script", sans-serif;
+  font-family: "Kaushan Script", sans-serif;
 }
 
 body {
@@ -9,9 +9,12 @@ body {
   grid-template-rows: 50px 1fr;
   grid-template-areas:
     "nav"
-    "main"
+    "main";
 }
 
+a {
+  color:rgb(68, 105, 78)
+}
 body > .navbar-top {
   grid-area: nav;
   display: flex;
@@ -20,25 +23,32 @@ body > .navbar-top {
   padding: 0 20px 0 30px;
 }
 
-.login img {
-  height: 30px;
+.logo {
+  display: flex;
+  justify-content: flex-start;
 }
 
 .swimmer-container {
   display: flex;
   justify-content: center;
 }
-
+.transparent-box {
+  color: green;
+}
 .bad-grapes-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  color: grey
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(68, 105, 78);
+  color: white;
 }
 
-.dive {
-  border-radius: 50%;
+h1 {
+  
 }
+
+
 
