@@ -1,8 +1,9 @@
 * {
-  font-family: "Kaushan Script", sans-serif;
+  font-family: 'Jolly Lodger', cursive;;
 }
 
 body {
+  background-color: rgb(163, 127, 82);
   margin: 0;
   height: 100vh;
   display: grid;
@@ -13,7 +14,7 @@ body {
 }
 
 a {
-  color:rgb(68, 105, 78)
+  color:rgb(124, 91, 47)
 }
 body > .navbar-top {
   grid-area: nav;
@@ -21,6 +22,7 @@ body > .navbar-top {
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
+  font-size: 30px;
 }
 
 .logo {
@@ -32,9 +34,7 @@ body > .navbar-top {
   display: flex;
   justify-content: center;
 }
-.transparent-box {
-  color: green;
-}
+
 .bad-grapes-text {
   position: absolute;
   top: 50%;
@@ -42,13 +42,11 @@ body > .navbar-top {
   transform: translate(-50%, -50%);
   font-size: 40px;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(68, 105, 78);
+  -webkit-text-stroke-color: rgb(202, 174, 146);
   color: white;
 }
 
-h1 {
-  
+.landing-page-container {
+  display: flex;
+  justify-content: center;
 }
-
-
-
