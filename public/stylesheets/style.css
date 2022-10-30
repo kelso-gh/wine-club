@@ -4,27 +4,20 @@
 
 body {
   margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  grid-template-areas:
+    "nav"
+    "main"
 }
 
-
-nav {
-  padding: 20px;
-  display: inline;
-  margin-left: 30em;
-  font-size: 14px;
-}
-
-title {
-  padding: 50px;
-  display: inline;
-  font-size: 30px;
-}
-
-.login {
+body > .navbar-top {
+  grid-area: nav;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
-  height: 34px;
+  padding: 0 20px 0 30px;
 }
 
 .login img {
