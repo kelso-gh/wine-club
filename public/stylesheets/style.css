@@ -1,5 +1,5 @@
 * {
-  font-family: 14px "Cormorant", serif;
+  font-family: 14px "Kaushan Script", sans-serif;
 }
 
 body {
@@ -23,3 +23,22 @@ body > .navbar-top {
 .login img {
   height: 30px;
 }
+
+.swimmer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.bad-grapes-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  color: grey
+}
+
+.dive {
+  border-radius: 50%;
+}
+
