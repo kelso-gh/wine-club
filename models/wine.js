@@ -17,3 +17,5 @@ const wineSchema = new Schema ({
         default: false
     }
 });
+
+module.exports = mongoose.model('Wine', wineSchema);
