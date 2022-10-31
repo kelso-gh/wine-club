@@ -50,3 +50,15 @@ body > .navbar-top {
   display: flex;
   justify-content: center;
 }
+
+.user-welcome-container {
+  display: inline;
+  text-align: center;
+  color: rgb(202, 174, 146);
+}
+
+.options-nav {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
