@@ -3,8 +3,7 @@ var router = express.Router();
 const winesCtrl = require('../controllers/wines')
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
-// GET /wines (display all movies)
-router.get('/', winesCtrl.index);
-router.get('/:id', winesCtrl.show);
+// Similar to performers in movies, starts with path of '/'
+
 
 module.exports = router;

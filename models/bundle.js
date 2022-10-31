@@ -28,9 +28,13 @@ const bundleSchema = new Schema({
         type: String,
         required: true
     },
-    wines: {
-        type: String,
-        enum: ['']
+    wine1: {
+        type: Schema.Types.ObjectId,
+        ref: 'Wine'
+    },
+    wine2: {
+        type: Schema.Types.ObjectId,
+        ref: 'Wine'
     },
     user: {
         type: Schema.Types.ObjectId,
