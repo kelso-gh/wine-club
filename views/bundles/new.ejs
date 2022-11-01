@@ -1,4 +1,21 @@
 <%- include('../partials/header') %>
-
+<form id="create-bundle" action="/bundles" method="POST">
+    <label>bundle name:</label>
+    <input type="text" name="bundle">
+    <label>type:</label>
+    <select name="type1">
+        <option value="red">White</option>
+        <option value="white">Red</option>
+        <option value="rose">Rose</option>
+        <option value="bubbles">Bubbles</option>
+    </select>
+    <select name="type2">
+        <option value="red">White</option>
+        <option value="white">Red</option>
+        <option value="rose">Rose</option>
+        <option value="bubbles">Bubbles</option>
+    </select>
+    <input type="submit" value="Add Bundle">
+</form>
 
 <%- include('../partials/footer') %>

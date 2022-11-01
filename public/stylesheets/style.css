@@ -14,7 +14,9 @@ body {
 }
 
 a {
-  color:rgb(124, 91, 47)
+  color:rgb(135, 103, 62);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(202, 174, 146);
 }
 body > .navbar-top {
   grid-area: nav;
@@ -45,6 +47,16 @@ body > .navbar-top {
   -webkit-text-stroke-color: rgb(202, 174, 146);
   color: white;
 }
+.new-bundle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(202, 174, 146);
+  color: white;
+}
 
 .landing-page-container {
   display: flex;
@@ -57,8 +69,3 @@ body > .navbar-top {
   color: rgb(202, 174, 146);
 }
 
-.options-nav {
-  display: flex;
-  justify-content: center;
-  font-size: 40px;
-}

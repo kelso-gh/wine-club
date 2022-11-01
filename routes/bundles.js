@@ -6,5 +6,6 @@ const ensureLoggedIn = require('../config/ensureLoggedIn');
 router.get('/', bundlesCtrl.index);
 router.get('/new', bundlesCtrl.new);
 router.get('/:id', bundlesCtrl.show);
+router.post('/', bundlesCtrl.create);
 
 module.exports = router;
