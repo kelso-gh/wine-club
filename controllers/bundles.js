@@ -9,17 +9,17 @@ module.exports = {
 }
 
 function index(req, res) {
-    Bundle.find({}, function(err, wines){
-        res.render('wines/index', { title: 'Wine Bundles', wines })
+    Bundle.find({}, function(err, bundles){
+        res.render('bundles/index', { title: 'Wine Bundles', bundles })
     });
 }
 
 // Detail page
 function show(req, res) {
     Bundle.findById(req.params.id, function(err, bundle){
-        Wine.find({ bundle: req.params.id }, function(err, wine){
-            res.render('wines/show', {title: 'Bundle Detail', bundle, wines});
-        });
+        // Wine.find({ bundle: req.params.id }, function(err, wine){
+            res.render('bundles/show', { title: 'Bundle Detail', bundle });
+        // });
     });
 }
 
@@ -28,13 +28,13 @@ function newBundle(req, res) {
 }
 
 function create(req, res) {
-    // req.body.user = req.user._id;
-    // req.body.userName = req.user.name;
-    // req.body.userAvatar = req.user.avatar;
+    req.body.user = req.user._id;
+    req.body.userName = req.user.name;
+    req.body.userAvatar = req.user.avatar;
     const bundle = new Bundle(req.body);
     bundle.save(function(err){
         if(err) return res.redirect('/bundles/new');
         console.log(bundle);
-        res.redirect('/bundles')
+        res.redirect(`/bundles/${bundle._id}`)
     });
 }

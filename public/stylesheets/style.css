@@ -1,5 +1,5 @@
 * {
-  font-family: 'Jolly Lodger', cursive;;
+  
 }
 
 body {
@@ -38,6 +38,7 @@ body > .navbar-top {
 }
 
 .bad-grapes-text {
+  font-family: 'Jolly Lodger', cursive;
   position: absolute;
   top: 50%;
   left: 50%;

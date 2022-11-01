@@ -4,8 +4,8 @@ const bundlesCtrl = require('../controllers/bundles')
 const ensureLoggedIn = require('../config/ensureLoggedIn');
 
 router.get('/', bundlesCtrl.index);
-router.get('/new', bundlesCtrl.new);
+router.get('/new', ensureLoggedIn, bundlesCtrl.new);
 router.get('/:id', bundlesCtrl.show);
-router.post('/', bundlesCtrl.create);
+router.post('/', ensureLoggedIn, bundlesCtrl.create);
 
 module.exports = router;
