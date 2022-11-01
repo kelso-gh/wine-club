@@ -17,9 +17,9 @@ function index(req, res) {
 // Detail page
 function show(req, res) {
     Bundle.findById(req.params.id, function(err, bundle){
-        // Wine.find({ bundle: req.params.id }, function(err, wine){
-            res.render('bundles/show', { title: 'Bundle Detail', bundle });
-        // });
+        Wine.find({ bundle: bundle._id}, function(err, wines){
+            res.render('bundles/show', { title: 'Bundle Detail', bundle, wines });
+        });
     });
 }
 

@@ -2,11 +2,28 @@
 <section it="bundle-show-page">
     <div>Bundle Name:</div>
     <div><%= bundle.bundle %></div>
-    <div>Wine One:</div>
-    <div><%= bundle.wine1 %></div>
-    <div>Wine Two:</div>
-    <div><%= bundle.wine2 %></div>
     <div>Created By:</div>
     <div></div>
+    <a href="/bundles/<%= bundle._id %>/wines/new">Add Wine</a>
+    <% if (wines.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% wines.forEach(function(w) { %>
+              <tr>
+                <td><%= w.name %><a href="/<%= w._id %>">View Wine Page</a> </td>
+                <td><img src=" <%= w.img %> "/></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Wines Yet :(</h5>
+      <% } %>
 </section>
 <%- include('../partials/footer') %>

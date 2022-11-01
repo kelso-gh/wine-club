@@ -8,7 +8,10 @@
     <div>Region</div>
     <div><%= wine.region %></div>
     <div>Natural</div>
-    <div><%= %></div>
+    <div><%= wine.natural ? 'Yes' : 'No' %></div>
+    <div>IMG</div>
+    <div><img src=" <%= wine.img %> "/></div>
+
 </section>
 
 <%- include('../partials/footer') %>

@@ -12,6 +12,12 @@
 </div>
 <div class="new-bundle">
 <a href="/bundles/new"> CREATE YOUR BUNDLE</a>
+<% bundles.forEach(function(b) { %>
+    <tr>
+        <td><%= b.name %></td>
+        <td><a href="/bundles/<%= b._id %>">DETAILS</a></td>
+    </tr>
+    <% }); %>
 </div>
 
 <%- include('../partials/footer') %>

@@ -15,7 +15,24 @@ const wineSchema = new Schema ({
     natural: {
         type: Boolean,
         default: false
-    }
+    },
+    img: {
+        type: String
+    },
+    bundle: {
+        type: Schema.Types.ObjectId,
+        ref: 'Bundle'
+    },
+    user: {
+        type: Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    userName: String,
+    userAvatar: String
+}, 
+{
+    timestamps: true
 });
 
 

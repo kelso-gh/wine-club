@@ -1,4 +1,23 @@
 <%- include('../partials/header') %>
 
+<th>Add Bundle:</th>
+<form id="add-departure-form" method="POST" action="/bundles/<%= bundleId %>/wines">
+    <label>Name:
+        <input type="text" name="name" required>
+    </label>
+    <label>Style:
+        <input type="text" name="style" required>
+    </label>
+    <label>Region:
+        <input type="text" name="region" required>
+    </label>
+    <label>Natural:
+        <input type="checkbox" name="natural" checked>
+    </label>
+    <label>IMG:
+        <input type="text" name="img" required>
+    </label>
+    <input type="submit" value="Add Wine">
+</form>
 
 <%- include('../partials/footer') %>
