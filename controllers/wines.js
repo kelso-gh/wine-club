@@ -16,7 +16,9 @@ function show(req, res) {
 }
 
 function create(req, res) {
+    req.body.user = req.user._id;
     req.body.bundle = req.params.id;
+    console.log(req.body);
     Wine.create(req.body, function(err, wine) {
         res.redirect(`/bundles/${req.params.id}`);
     });
