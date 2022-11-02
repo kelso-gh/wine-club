@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-<section it="bundle-show-page">
+<section id="bundle-show-page">
     <div>Bundle Name:</div>
     <div><%= bundle.bundle %></div>
     <div>Created By:</div>
@@ -10,13 +10,19 @@
           <thead>
             <tr>
               <th>Name</th>
+              <th>Style</th>
+              <th>Region</th>
+              <th>Natural</th>
               <th>Image</th>
             </tr>
           </thead>
           <tbody>
             <% wines.forEach(function(w) { %>
               <tr>
-                <td><%= w.name %><a href="/<%= w._id %>">View Wine Page</a> </td>
+                <td><%= w.name %></a> </td>
+                <td><%= w.style %></td>
+                <td><%= w.region %></td>
+                <td><%= w.natural %></td>
                 <td><img src=" <%= w.img %> "/></td>
               </tr>
             <% }); %>
@@ -26,4 +32,20 @@
         <h5>No Wines Yet :(</h5>
       <% } %>
 </section>
+
+<h2>Leave Your Review</h2>
+<form id="add-review-form" method="POST" action="/bundles/ <%= bundle._id %>/reviews">
+<label>Review:</label>
+<textarea name="content"></textarea>
+  <label>Rating:</label>
+  <select name="rating">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5" selected>5</option>
+  </select>
+  <input type="submit" value="Add Review">
+</form>
+
 <%- include('../partials/footer') %>
