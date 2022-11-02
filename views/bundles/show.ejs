@@ -23,7 +23,7 @@
                 <td><%= w.style %></td>
                 <td><%= w.region %></td>
                 <td><%= w.natural %></td>
-                <td><img src=" <%= w.img %> "/></td>
+                <td><img src=" <%= w.img %> " height="50px"/></td>
               </tr>
             <% }); %>
           </tbody>
@@ -65,6 +65,14 @@
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
+          <% if (user) { %>
+          <td><form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
+            <button type="submit">DELETE REVIEW</button>
+          </form></td>
+      
+          <td><a href="/reviews/<%= r._id %>/edit">Edit</a>
+          </td>
+          <% } %>
         </tr>
       <% }); %>
       <tr>
@@ -80,5 +88,6 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
+
 
 <%- include('../partials/footer') %>

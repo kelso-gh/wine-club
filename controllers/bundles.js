@@ -20,11 +20,10 @@ function show(req, res) {
         if(err) {
             res.render('bundles/error')
         } else {
-            Wine.find({ bundle: bundle._id }, function(err, wines){ 
+            Wine.find({ bundle: bundle._id }, function(err, wines) { 
                 res.render('bundles/show', { title: 'Bundle Detail', bundle, wines });
             });
-        }
-        
+        }    
     });
 }
 
