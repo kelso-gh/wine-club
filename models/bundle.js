@@ -10,12 +10,12 @@ const reviewSchema = new Schema ({
         type: Number,
         min: 1,
         max: 5,
-        defailt: 5
+        default: 5
     },
     user: {
         type: Schema.Types.ObjectId,
         ref: 'User',
-        required: true
+        // required: true
     },
     userName: String,
     userAvatar: String
@@ -34,10 +34,10 @@ const bundleSchema = new Schema({
         required: true
     },
     userName: String,
-    userAvatar: String
-}, {
+    userAvatar: String,
     reviews: [reviewSchema]
-}, {
+},
+  {  
     timestamps: true
 });
 
