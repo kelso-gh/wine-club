@@ -1,4 +1,3 @@
-const bundle = require('../models/bundle');
 const Bundle = require('../models/bundle')
 
 module.exports = {
@@ -6,7 +5,11 @@ module.exports = {
 };
 
 function create(req, res) {
-    bundle.findById(req.params.id, function (err, bundle){
+    Bundle.findById(req.params.id, function (err, bundle){
+        req.body.user = req.user._id;
+        req.body.userName = req.user.name;
+        req.body.userAvatar = req.user.avatar;
+        console.log(req.body);
         bundle.reviews.push(req.body);
         bundle.save(function(err) {
             res.redirect(`/bundles/${bundle._id}`);
