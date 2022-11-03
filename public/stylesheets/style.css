@@ -1,7 +1,3 @@
-* {
-  
-}
-
 body {
   font-family: 'Kalam', cursive;
   background-color: rgb(163, 127, 82);
@@ -37,7 +33,7 @@ input, label, #bundle-show-page, h5 {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  -webkit-text-stroke-width: 4px;
+  -webkit-text-stroke-width: 3px;
   color: white;
 }
 .new-bundle {
@@ -47,11 +43,6 @@ input, label, #bundle-show-page, h5 {
   transform: translate(-50%, -50%);
   font-size: 30px;
   -webkit-text-stroke-width: 4px;
-}
-
-#bundle-show-page, #review-show-page {
-display: flex;
-justify-content: center;
 }
 
 .bundle-list {
@@ -74,17 +65,20 @@ justify-content: center;
   color: rgb(202, 174, 146);
 }
 
-.btn-primary {
-  background-color: rgb(35, 62, 80);
-}
-
-.details {
+.details, #add-wine-form, #new-bundle-form {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
 }
 
-#new-bundle-form {
+#show-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+  color: rgb(202, 174, 146)
 }
+
+
 

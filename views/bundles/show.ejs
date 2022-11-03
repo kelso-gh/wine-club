@@ -1,6 +1,6 @@
 <%- include('../partials/header') %>
-<section id="bundle-show-page">
-    <ul>
+<section id="show-container">
+  <ul>
     <div>Bundle Name:</div>
     <div><%= bundle.bundle %></div>
     <a href="/bundles/<%= bundle._id %>/wines/new">Add Wine</a>
@@ -18,7 +18,7 @@
           <tbody>
             <% wines.forEach(function(w) { %>
               <tr>
-                <td><%= w.name %></a> </td>
+                <td><%= w.name %></td>
                 <td><%= w.style %></td>
                 <td><%= w.region %></td>
                 <td><%= w.natural %></td>
@@ -30,10 +30,10 @@
       <% } else { %>
         <h5>no wine added</h5>
       <% } %>
-      </ul>
-</section>
+  </ul>
+</table>
 
-<div id="review-show-page">
+<table>
 <ul>
 <form id="add-review-form" method="POST" action="/bundles/<%= bundle._id %>/reviews">
   <label>Review:</label>
@@ -54,6 +54,7 @@
     <thead>
       <tr>
         <th>Date</th>
+        <th>User</th>
         <th>Review</th>
         <th>Rating</th>
       </tr>
@@ -66,6 +67,7 @@
           <td><%= r.createdAt.toLocaleDateString() %></td>
           <td><%= r.content %></td>
           <td><%= r.rating %></td>
+          <td><%= r.userName %></td>
           <% if (user) { %>
           <td><form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
             <button type="submit">DELETE REVIEW</button>
@@ -90,6 +92,7 @@
   <h5>No Reviews Yet</h5>
 <% } %>
 </ul>
-</div>
+</table>
+</section>
 
 <%- include('../partials/footer') %>

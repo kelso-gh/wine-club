@@ -1,12 +1,9 @@
 <%- include('../partials/header') %>
 
-<th>Add Your Wine:</th>
 <form id="add-wine-form" method="POST" action="/bundles/<%= bundleId %>/wines">
-    <div class="mb-3">
-    <label class="form-label">Name:
-        <input class="form-control" type="text" name="name" required>
+    <label>Name:
+        <input type="text" name="name" required>
     </label>
-    </div>
     <label>Style:
         <input type="text" name="style" required>
     </label>
@@ -21,5 +18,6 @@
     </label>
     <input type="submit" value="Add Wine">
 </form>
+
 
 <%- include('../partials/footer') %>
