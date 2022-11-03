@@ -11,13 +11,13 @@
     <img src="/images/wallpaperBGWC.jpg" alt="">
 </div>
 <div class="new-bundle">
-<a href="/bundles/new" style="text-decoration:none"> CREATE YOUR BUNDLE</a>
+    <a href="/bundles/new" style="text-decoration:none"> CREATE YOUR BUNDLE</a>
 </div>
 <div class="bundle-list">
-<% bundles.forEach(function(b) { %>
+    <% bundles.forEach(function(b) { %>
         <td><%= b.name %></td>
         <ul class="details">
-        <td><a href="/bundles/<%= b._id %>" style="text-decoration:none">Bundle Details</a></td>
+        <td><a href="/bundles/<%= b._id %>" style="text-decoration:none"><%= b.bundle %></a></td>
         </ul>
     </tr>
     <% }); %>
