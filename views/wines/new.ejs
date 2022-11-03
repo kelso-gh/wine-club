@@ -2,9 +2,11 @@
 
 <th>Add Your Wine:</th>
 <form id="add-wine-form" method="POST" action="/bundles/<%= bundleId %>/wines">
-    <label>Name:
-        <input type="text" name="name" required>
+    <div class="mb-3">
+    <label class="form-label">Name:
+        <input class="form-control" type="text" name="name" required>
     </label>
+    </div>
     <label>Style:
         <input type="text" name="style" required>
     </label>

@@ -3,6 +3,7 @@
 }
 
 body {
+  font-family: 'Kalam', cursive;
   background-color: rgb(163, 127, 82);
   margin: 0;
   height: 100vh;
@@ -13,23 +14,16 @@ body {
     "main";
 }
 
-a {
-  color:rgb(135, 103, 62);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgb(202, 174, 146);
-}
-body > .navbar-top {
-  grid-area: nav;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-  font-size: 30px;
+nav {
+  background-color: rgb(226, 187, 139);
 }
 
-.logo {
-  display: flex;
-  justify-content: flex-start;
+a {
+  color:rgb(135, 103, 62);
+}
+
+input, label, #bundle-show-page, h5 {
+  color:rgb(202, 174, 146)
 }
 
 .swimmer-container {
@@ -38,25 +32,35 @@ body > .navbar-top {
 }
 
 .bad-grapes-text {
-  font-family: 'Jolly Lodger', cursive;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 40px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(202, 174, 146);
+  -webkit-text-stroke-width: 4px;
   color: white;
 }
 .new-bundle {
   position: absolute;
-  top: 50%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 40px;
-  -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: rgb(202, 174, 146);
-  color: white;
+  font-size: 30px;
+  -webkit-text-stroke-width: 4px;
+}
+
+#bundle-show-page, #review-show-page {
+display: flex;
+justify-content: center;
+}
+
+.bundle-list {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  -webkit-text-stroke-width: 4px;
 }
 
 .landing-page-container {
@@ -68,5 +72,19 @@ body > .navbar-top {
   display: inline;
   text-align: center;
   color: rgb(202, 174, 146);
+}
+
+.btn-primary {
+  background-color: rgb(35, 62, 80);
+}
+
+.details {
+  display: flex;
+  justify-content: center;
+}
+
+#new-bundle-form {
+  display: flex;
+  justify-content: center;
 }
 

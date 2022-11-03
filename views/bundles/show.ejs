@@ -1,9 +1,8 @@
 <%- include('../partials/header') %>
 <section id="bundle-show-page">
+    <ul>
     <div>Bundle Name:</div>
     <div><%= bundle.bundle %></div>
-    <div>Created By:</div>
-    <div></div>
     <a href="/bundles/<%= bundle._id %>/wines/new">Add Wine</a>
     <% if (wines.length) { %>
         <table>
@@ -29,11 +28,13 @@
           </tbody>
         </table>
       <% } else { %>
-        <h5>No Wines Yet :(</h5>
+        <h5>no wine added</h5>
       <% } %>
+      </ul>
 </section>
 
-<h2>Leave Your Review</h2>
+<div id="review-show-page">
+<ul>
 <form id="add-review-form" method="POST" action="/bundles/<%= bundle._id %>/reviews">
   <label>Review:</label>
 <textarea name="content"></textarea>
@@ -88,6 +89,7 @@
 <% } else { %>
   <h5>No Reviews Yet</h5>
 <% } %>
-
+</ul>
+</div>
 
 <%- include('../partials/footer') %>
