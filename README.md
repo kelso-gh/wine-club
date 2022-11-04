@@ -5,6 +5,13 @@ BGWC is an application centered around wine! Through signing up with their e-mai
 ![image](/public/images/readme/BGWC1.png)
 ![image](/public/images/readme/BGWC2.png)
 
+
+# Trello Board
+
+Click the link below to see my trello board:
+
+https://trello.com/b/Rh40B1rU/fs-wine-club-application
+
 # Technologies Used
 
 - JavaScript
