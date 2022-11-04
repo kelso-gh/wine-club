@@ -20,7 +20,7 @@ BGWC is an application centered around wine! Through signing up with their e-mai
 
 To sign-up and begin building your BG wine bundle click this link: 
 
-bag-grapes.herokuapp.com
+http://bad-grapes.herokuapp.com
 
 # Next Steps
 
