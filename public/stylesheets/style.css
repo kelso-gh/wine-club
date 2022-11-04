@@ -71,7 +71,7 @@ input, label, #bundle-show-page, h5 {
   justify-content: center;
 }
 
-#show-container {
+#show-container, .edit-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,6 +79,7 @@ input, label, #bundle-show-page, h5 {
   margin-top: 100px;
   color: rgb(202, 174, 146)
 }
+
 
 
 
